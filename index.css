@@ -154,7 +154,7 @@ header {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("/images/bg.jpg") center no-repeat;
+  background: url("./images/bg.jpg") center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -345,7 +345,7 @@ header {
 
 /* MY SHOWCASE */
 .showcase {
-  background: url("/images/info-2.jpg") center no-repeat;
+  background: url("./images/info-2.jpg") center no-repeat;
   background-size: cover;
 }
 
