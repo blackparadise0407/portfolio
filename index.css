@@ -37,6 +37,10 @@ img {
   max-width: 100%;
 }
 
+.profileImg {
+  border-radius: 1rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -154,7 +158,7 @@ header {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("./images/bg.jpg") center no-repeat;
+  background: url("./images/pic-2.jpg") center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -306,6 +310,23 @@ header {
   text-align: center;
 }
 
+.my-info i {
+  color: var(--secondary-font-color);
+  transition: color 0.5s;
+}
+
+.my-info i:nth-child(2) {
+  color: var(--main-font-color-dark);
+}
+
+.my-info i:hover {
+  color: var(--main-font-color-dark);
+}
+
+.my-info i:nth-child(2):hover {
+  color: var(--main-font-color-dark);
+}
+
 .my-description {
   margin-bottom: 3rem;
 }
@@ -367,6 +388,10 @@ header {
   font-size: 2rem;
   letter-spacing: 1px;
   transition: color 0.5s;
+}
+
+.image-item > img {
+  border-radius: 1rem;
 }
 
 .image-item > a:hover,
@@ -508,6 +533,26 @@ footer {
   .nav-item {
     margin: 0 2.4rem;
     border: none;
+    position: relative;
+  }
+
+  .nav-item::before {
+    content: "";
+    bottom: -80%;
+    left: 50%;
+    position: absolute;
+    width: 0;
+    height: 0.1rem;
+    background-color: #fff;
+    transition: all 0.5s;
+    transform: scale(0);
+  }
+
+  .nav-item:hover::before {
+    left: 0;
+    background-color: var(--secondary-font-color);
+    width: 100%;
+    transform: scale(1);
   }
 
   .nav-item:last-child {
