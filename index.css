@@ -11,9 +11,12 @@
 
 :root {
   --main-font: "Play", sans-serif;
-  --secondary-font: "Playfair Display", serif;
+  /* --secondary-font: "Playfair Display", serif; */
+  --secondary-font: Georgia, serif;
   --main-font-color-dark: #252525;
-  --secondary-font-color: #c59d5f;
+  /* --secondary-font-color: #c59d5f; */
+  --secondary-font-color: #c1a050;
+  --text-color: #fff;
   --body-font-color: #515151;
 }
 
@@ -74,7 +77,7 @@ header {
 }
 
 .menu-toggle {
-  color: #fff;
+  color: var(--text-color);
   font-size: 2.2rem;
   position: absolute;
   top: 50%;
@@ -120,6 +123,10 @@ header {
 }
 
 .open .fa-times {
+  /* position: fixed;
+  
+  top: 0;
+  right: 0; */
   display: block;
 }
 
@@ -142,7 +149,7 @@ header {
 
 .nav-link {
   display: block;
-  color: #fff;
+  color: var(--text-color);
   text-transform: uppercase;
   font-size: 1.6rem;
   letter-spacing: 2px;
@@ -170,11 +177,12 @@ header {
   font-family: var(--main-font);
   color: var(--secondary-font-color);
   font-weight: 600;
-  line-height: 0.6;
+  line-height: 0.8;
   letter-spacing: 2px;
   opacity: 0;
   animation: fadeUp 0.5s forwards;
   animation-delay: 0.5s;
+  text-shadow: 2px 2px 4px #454547;
 }
 
 .first-letter {
@@ -183,7 +191,7 @@ header {
 }
 
 .headline {
-  color: #fff;
+  color: var(--text-color);
   font-size: 3.7rem;
   font-family: var(--secondary-font);
   text-transform: uppercase;
@@ -203,7 +211,7 @@ header {
   width: 100%;
   max-width: 8.4rem;
   height: 0.25rem;
-  background-color: #fff;
+  background-color: var(--text-color);
   position: relative;
   opacity: 0;
   animation: grow 2s forwards;
@@ -223,12 +231,12 @@ header {
 }
 
 .line-right::before {
-  border-right-color: #fff;
+  border-right-color: var(--text-color);
   right: 0;
 }
 
 .line-left::before {
-  border-left-color: #fff;
+  border-left-color: var(--text-color);
   left: 0;
 }
 
@@ -248,7 +256,7 @@ header {
 }
 
 .headline-description h5 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.4rem;
   font-weight: 100;
   text-transform: uppercase;
@@ -267,7 +275,7 @@ header {
 .cta-btn {
   font-size: 1.1rem;
   font-weight: 600;
-  background-color: #fff;
+  background-color: var(--text-color);
   padding: 0.9rem 1.8rem;
   color: var(--body-font-color);
   border-radius: 0.4rem;
@@ -276,7 +284,7 @@ header {
 
 .cta-btn:hover,
 .cta-btn:focus {
-  color: #fff;
+  color: var(--text-color);
   background-color: var(--body-font-color);
 }
 
@@ -303,7 +311,7 @@ header {
 
 .global-headline .sub-headline {
   letter-spacing: -1px;
-  line-height: 0.62;
+  line-height: 0.72;
 }
 
 .my-info {
@@ -346,12 +354,13 @@ header {
 .body-btn::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -3px;
-  width: 100%;
+  width: 0;
   height: 2px;
   background-color: var(--secondary-font-color);
-  transition: background-color 0.5s;
+  transition: all 0.5s;
+  transform: scale(0);
 }
 
 .body-btn:hover,
@@ -361,6 +370,9 @@ header {
 
 .body-btn:hover::before,
 .body-btn:focus::before {
+  left: 0;
+  width: 100%;
+  transform: scale(1);
   background-color: var(--main-font-color-dark);
 }
 
@@ -408,7 +420,7 @@ header {
 footer {
   padding: 7.8rem;
   background-color: #121212;
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
   position: relative;
 }
@@ -426,7 +438,7 @@ footer {
 
 .back-to-top i {
   display: block;
-  color: #fff;
+  color: var(--text-color);
   font-size: 2rem;
   padding: 2rem;
   animation: up 2s infinite;
@@ -465,7 +477,7 @@ footer {
 
 .social-icons i {
   font-size: 2rem;
-  color: #fff;
+  color: var(--text-color);
   padding: 0.8rem 2rem;
   opacity: 0.5;
   transition: color 0.5s;
@@ -510,6 +522,10 @@ footer {
     padding: 7.9rem;
   }
 
+  .sub-headline {
+    line-height: 0.9;
+  }
+
   .menu-toggle {
     display: none;
   }
@@ -543,7 +559,7 @@ footer {
     position: absolute;
     width: 0;
     height: 0.1rem;
-    background-color: #fff;
+    background-color: var(--text-color);
     transition: all 0.5s;
     transform: scale(0);
   }
@@ -572,7 +588,7 @@ footer {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--text-color);
     left: 0;
     bottom: -3px;
   }
