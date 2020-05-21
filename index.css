@@ -124,7 +124,6 @@ header {
 
 .open .fa-times {
   /* position: fixed;
-  
   top: 0;
   right: 0; */
   display: block;
@@ -403,7 +402,14 @@ header {
 }
 
 .image-item > img {
+  transition: 150ms;
+  transform: perspective(1000px) translateY(var(--translate-y, 0));
   border-radius: 1rem;
+}
+
+.image-item > img:hover {
+  --translate-y: -10px;
+  box-shadow: 2px 2px 4px var(--main-font-color-dark);
 }
 
 .image-item > a:hover,
@@ -554,21 +560,18 @@ footer {
 
   .nav-item::before {
     content: "";
-    bottom: -80%;
-    left: 50%;
+    bottom: -70%;
     position: absolute;
     width: 0;
-    height: 0.1rem;
+    left: 0;
+    height: 1px;
     background-color: var(--text-color);
     transition: all 0.5s;
-    transform: scale(0);
   }
 
   .nav-item:hover::before {
-    left: 0;
+    width: 70%;
     background-color: var(--secondary-font-color);
-    width: 100%;
-    transform: scale(1);
   }
 
   .nav-item:last-child {
